@@ -1,16 +1,21 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
 # dependencies
 node_modules/
 
-# Expo
+# Expo / React Native
 .expo/
 dist/
 web-build/
 expo-env.d.ts
+app-example # Ignores the example file often generated in Expo Router
 
-# Native
-.kotlin/
+# Environment Variables (CRITICAL FOR SECRETS)
+# This ignores the .env file that holds your CLERK_PUBLISHABLE_KEY, etc.
+.env
+.env*.local
+
+# Native (iOS/Android builds)
+android/build/
+ios/build/
 *.orig.*
 *.jks
 *.p8
@@ -18,25 +23,16 @@ expo-env.d.ts
 *.key
 *.mobileprovision
 
-# Metro
+# Metro / Debug
 .metro-health-check*
-
-# debug
 npm-debug.*
 yarn-debug.*
 yarn-error.*
 
 # macOS
 .DS_Store
-*.pem
 
-# local env files
-.env*.local
-
-# typescript
-*.tsbuildinfo
-
-app-example
-
+#.e
 .expo/
-.env
+.expo-shared/
+.vscode/
