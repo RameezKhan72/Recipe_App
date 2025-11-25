@@ -33,6 +33,6 @@ yarn-error.*
 .DS_Store
 
 #.e
-.expo
+.expo/
 .expo-shared/
 .vscode/
